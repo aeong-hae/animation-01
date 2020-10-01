@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.night{
+
+}
+
+.surface{
+    height: 140px;
+    width: 500%;
+    background: url('image/A2.png');
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveRight 6s linear;
+
+}
+
+.car{
+    position: relative;
+    bottom: 580px;
+    left: 1980px;
+    animation: car 6s ease 0.5s infinite normal backwards;
+}
+
+.star1{
+    position: absolute;
+    top: -60vh;
+    left: -2vw;
+    animation: star1 6s linear 0.5s infinite normal backwards;
+}
+
+.star2{
+    position: absolute;
+    top: 1vh;
+    left: 10vw;
+    animation: star2 4s linear 0.8s infinite normal backwards;
+}
+
+.star3{
+    position: absolute;
+    bottom: 5vh;
+    left: -6vw;
+    animation: star3 10s linear 0.8s infinite normal backwards;
+}
+
+.star4{
+    position: absolute;
+    bottom: 20vh;
+    left: -10vw;
+    animation: star4 4s linear 0.8s infinite normal backwards;
+}
+
+.bar {
+    color: #fff;
+    font-weight: 900;
+    position: absolute;
+    top: 505px;
+    left: 1610px;
+    transform: translate(-50%,-50%);
+    font-size: 2.5em;
+    text-shadow: 0 0 20px #ff005b;
+
+    animation: bar 1s ease infinite;
+    -moz-animation: bar 1s ease infinite;
+    -webkit-animation: bar 1s ease infinite;
+
+}
+
+
+
+.bar::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fe3a80;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+
+
+/* animation */
+
+@keyframes car{
+    0% {left: 1980px; bottom: 580px;}
+    100% {left: -600px; bottom: 580px;}
+}
+
+@keyframes bar{
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .0 .0 .0 #806914;
+      color: #FED128;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .0 .0 .0 #40340A;
+      color: #806914;
+    }
+  }
+
+  @keyframes star1{
+      0% {opacity: 0%;}
+      50% {opacity: 100%;}
+      100% {opacity: 0%;}
+  }
+
+  @keyframes star2{
+      0% {opacity: 0%;}
+      50% {opacity: 100%;}
+      100% {opacity: 0%;}
+  }
+
+  @keyframes star3{
+      0% {opacity: 0%;}
+      20% {opacity: 100%;}
+      40% {opacity: 20%;}
+      60% {opacity: 60%;}
+      80% {opacity: 40%;}
+      100% {opacity: 0%;}
+  }
+
+  @keyframes star4{
+      0% {opacity: 0%;}
+      50% {opacity: 100%;}
+      100% {opacity: 0%;}
+  }
